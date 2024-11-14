@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farmers' Crop Price Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js library -->
+</head>
+<body>
+
+  <header>
+    <h1>Farmers' Crop Price Tracker</h1>
+    <nav>
+      <a href="#real-time">Real-Time Crop Prices</a>
+      <a href="#analysis">Crop Analysis</a>
+      <a href="#guidance">Best Selling Time</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Real-Time Prices Section -->
+    <section id="real-time">
+      <h2>Real-Time Crop Prices</h2>
+      <input type="text" id="cropSearch" placeholder="Enter crop name..." oninput="fetchCropPrices()">
+      <div id="pricesTable">
+        <!-- Data will be populated here -->
+      </div>
+    </section>
+
+    <!-- Crop Analysis Section -->
+    <section id="analysis">
+      <h2>1-Year Crop Price Analysis</h2>
+      <canvas id="priceChart" width="600" height="400"></canvas>
+    </section>
+
+    <!-- Best Selling Time Section -->
+    <section id="guidance">
+      <h2>Best Time to Sell Crops</h2>
+      <p id="bestTime">Loading guidance...</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Farmers' Crop Price Tracker</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
